@@ -17,6 +17,6 @@ jobs:
       - run: |
           cd ios
           pwd
-          fastlane beta
+          bundle exec fastlane beta
         env:
           FLUTTER_ROOT: /Users/akash/Work/projects/fastlane_test/github_actions_setup/.fvm/flutter_sdk
