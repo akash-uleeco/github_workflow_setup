@@ -12,12 +12,12 @@ jobs:
       #   uses: ruby/setup-ruby@v1
       #   with:
       #     ruby-version: 2.6.10
-      - name: Install fastlane
-        run: bundle install
+      # - name: Install fastlane
+      #   run: bundle install
       - run: |
-          source ~/.zshrc
+          source /Users/akash/.zshrc
           cd ios
           pwd
-          bundle exec fastlane beta
+          fastlane beta
         env:
           FLUTTER_ROOT: /Users/akash/Work/projects/fastlane_test/github_actions_setup/.fvm/flutter_sdk
