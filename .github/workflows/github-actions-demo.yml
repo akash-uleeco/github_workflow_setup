@@ -14,6 +14,6 @@ jobs:
           ruby-version: 2.6.10
       - run: cd ios
       - run: pwd
-      - run: bundle exec fastlane beta
+      - run: fastlane beta
         env:
           FLUTTER_ROOT: /Users/akash/Work/projects/fastlane_test/github_actions_setup/.fvm/flutter_sdk
