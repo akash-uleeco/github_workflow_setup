@@ -15,10 +15,8 @@ jobs:
       - name: Install fastlane
         run: bundle install
       - run: |
-          /Users/akash/fvm/versions/2.10.1/bin/flutter clean
-          /Users/akash/fvm/versions/2.10.1/bin/flutter build
           cd ios
           pwd
-          bundle exec fastlane beta
+          fastlane beta
         env:
           FLUTTER_ROOT: /Users/akash/Work/projects/fastlane_test/github_actions_setup/.fvm/flutter_sdk
