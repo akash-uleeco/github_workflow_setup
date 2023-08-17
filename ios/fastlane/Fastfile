@@ -18,8 +18,7 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new beta build to TestFlight"
   lane :beta do
-    xcversion(version: "14.3.1")
-    xcode_select("/Applications/Xcode.app")
+    match(type: 'appstore')
     build_app(workspace: "Runner.xcworkspace", scheme: "Runner", xcargs: "-allowProvisioningUpdates")
     upload_to_testflight
   end
