@@ -6,11 +6,10 @@ on:
 jobs:
   build:
     runs-on: macos-latest
-    steps:
-      - name: Setup Ruby
-        run: |
-          rbenv global 3.2.2
-      - uses: actions/checkout@v2
+    steps:  
+      - uses: actions/checkout@v3    
+      - name: Set up ruby
+        uses: ruby/setup-ruby@v1
       - run: cd ios
       - run: pwd
       - run: bundle exec fastlane beta
