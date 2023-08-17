@@ -11,7 +11,7 @@ jobs:
       - name: Set up ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.10p210
+          ruby-version: 2.6.10
       - run: cd ios
       - run: pwd
       - run: bundle exec fastlane beta
