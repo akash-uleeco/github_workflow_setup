@@ -8,14 +8,13 @@ jobs:
     runs-on: macos-latest
     steps:  
       - uses: actions/checkout@v3    
-      # - name: Set up ruby
-      #   uses: ruby/setup-ruby@v1
-      #   with:
-      #     ruby-version: 2.6.10
-      # - name: Install fastlane
-      #   run: bundle install
+      - name: Set up ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6.10
+      - name: Install fastlane
+        run: bundle install
       - run: |
-          source /Users/akash/.zshrc
           cd ios
           pwd
           fastlane beta
